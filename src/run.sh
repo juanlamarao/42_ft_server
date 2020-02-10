@@ -14,9 +14,9 @@
 /etc/init.d/mysql start
 /etc/init.d/nginx start
 /etc/init.d/php7.3-fpm start
-echo " ________________________________"
-echo "< nothing to see here! move on.. >"
-echo " --------------------------------"
+echo " __________________________________________"
+echo "< nothing more to do! Lets see some logs.. >"
+echo " ------------------------------------------"
 echo "        \\   ^__^"
 echo "         \\  (oo)\\_______"
 echo "            (__)\\       )\\/\\"
