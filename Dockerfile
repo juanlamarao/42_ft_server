@@ -1,5 +1,5 @@
 FROM debian:buster
-LABEL maintainer="Juan 'juolivei' Lamarao"
+LABEL maintainer="Juan 'juolivei' Lamarao <juolivei@student.42sp.org.br"
 COPY src/deploy.sh /root/
 COPY src/nginx.conf /root/
 COPY src/latest.tar.gz /root/
@@ -10,4 +10,5 @@ COPY src/wordpress.sql /root/
 RUN apt-get install dialog apt-utils -y
 EXPOSE 80 443
 #RUN bash /root/deploy.sh && tail -f /dev/null
-RUN tail -f /dev/null
+RUN bash /root/deploy.sh
+CMD ["bash", "/root/run.sh"]
