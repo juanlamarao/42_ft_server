@@ -1,5 +1,6 @@
 FROM debian:buster
 LABEL maintainer="Juan 'juolivei' Lamarao <juolivei@student.42sp.org.br"
+COPY src/run.sh /root/
 COPY src/deploy.sh /root/
 COPY src/nginx.conf /root/
 COPY src/latest.tar.gz /root/
