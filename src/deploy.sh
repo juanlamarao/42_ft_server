@@ -18,7 +18,7 @@ ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 #apt-get update
 
 #install mysql & nginx & php
-echo -e "Installing Nginx Mysql and PHP packages.."
+echo -e "\nInstalling Nginx Mysql and PHP packages.."
 aptitude install -y mariadb-server nginx php7.3 php7.3-fpm php7.3-mysql php-common php7.3-cli php7.3-common php7.3-json php7.3-opcache php7.3-readline php-json php-mbstring php7.3-mbstring php-curl php-gd php-intl php-soap php-xml php-xmlrpc php-zip > /dev/null
 echo -e ".......................................\e[32m\e[1mOK\e[0m"
 
@@ -27,18 +27,18 @@ mkdir /var/www/localhost
 cd /root
 
 #start mysql & nginx
-echo -e "Starting services.."
+echo -e "\nStarting services.."
 /etc/init.d/mysql start
 /etc/init.d/nginx start
 /etc/init.d/php7.3-fpm start
 echo -e "....................\e[32m\e[1mOK\e[0m"
 
 #configure SSL
-echo -e "Setting SSL certificate.."
+echo -e "\nSetting SSL certificate.."
 openssl req -newkey rsa:4096 -days 365 -nodes -x509 \
     -subj "/C=BR/ST=Sao Paulo/L=Sao Paulo/O=localhost/OU=Development/CN=localhost/emailAddress=juolivei@localhost.dev" \
     -keyout localhost.dev.key \
-    -out localhost.dev.crt
+    -out localhost.dev.crt > /dev/null
 cp localhost.dev.crt /etc/ssl/certs/
 cp localhost.dev.key /etc/ssl/private/
 chmod 600 /etc/ssl/certs/localhost.dev.crt /etc/ssl/private/localhost.dev.key
@@ -59,7 +59,7 @@ echo "FLUSH PRIVILEGES;" | mysql -u root
 echo -e ".....................\e[32m\e[1mOK\e[0m"
 
 #install wordpress
-echo "Installing wordpress.."
+echo "\nInstalling wordpress.."
 #curl -LO https://wordpress.org/latest.tar.gz
 tar -xf latest.tar.gz
 cp wp-config.php wordpress/wp-config.php
@@ -76,20 +76,20 @@ mysql -u root wordpress < wordpress.sql
 echo -e "...................................\e[32m\e[1mOK\e[0m"
 
 #clean cache
-echo "Cleaning cache.."
+echo "\nCleaning cache.."
 apt-get clean -y > /dev/null
 apt-get autoclean -y > /dev/null
 apt-get autoremove -y > /dev/null
 echo -e "..............\e[32m\e[1mOK\e[0m"
 
-echo "\n _______"
+echo -e "\n _______"
 echo -e "< \e[32m\e[1mDone!\e[0m >"
 echo " -------"
 echo "        \\   ^__^"
 echo "         \\  (oo)\\_______"
 echo "            (__)\\       )\\/\\"
 echo "                ||----w |"
-echo "                ||     ||\n\n"
+echo -e "                ||     ||\n\n"
 
 #restart services
 #/etc/init.d/mysql restart
