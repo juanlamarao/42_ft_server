@@ -8,4 +8,5 @@ COPY src/phpmyadmin.tar.gz /root/
 COPY src/wp-config.php /root/
 COPY src/wordpress.sql /root/
 EXPOSE 80 443
-RUN bash /root/deploy.sh && tail -f /dev/null
+#RUN bash /root/deploy.sh && tail -f /dev/null
+RUN tail -f /dev/null
