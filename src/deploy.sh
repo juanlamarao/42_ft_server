@@ -18,7 +18,7 @@ ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 apt-get update
 
 #dependencias
-apt-get install -y aptitude apt-utils
+apt-get install -y aptitude
 #echo "\n\nFASE -1 OKAAAAAAAAY\n\n\n"
 #sleep 6
 
@@ -68,16 +68,16 @@ chmod 600 /etc/ssl/certs/localhost.dev.crt /etc/ssl/private/localhost.dev.key
 
 #install phpmyadmin
 #wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz
-tar -xvf phpmyadmin.tar.gz
-mv phpmyadmin /var/www/localhost/phpmyadmin/
+tar -xvf phpMyAdmin-4.9.0.1-all-languages.tar.gz
+mv phpMyAdmin-4.9.0.1-all-languages /var/www/localhost/phpmyadmin
 cp -pr ./config.ini.php /var/www/localhost/phpmyadmin/config.inc.php
 cp -pr ./nginx.conf /etc/nginx/sites-available/default
 #chmod 755 /var/www/localhost
 chown -R www-data:www-data /var/www/localhost/phpmyadmin
 echo "GRANT ALL PRIVILEGES ON phpmyadmin.* TO 'juolivei'@'localhost' IDENTIFIED BY 'juolivei';" | mysql -u root
 echo "FLUSH PRIVILEGES;" | mysql -u root
-echo "\n\nFASE 7 OKAAAAAAAAY\n\n\n"
-sleep 6
+#echo "\n\nFASE 7 OKAAAAAAAAY\n\n\n"
+#sleep 6
 
 #install wordpress
 #curl -LO https://wordpress.org/latest.tar.gz
