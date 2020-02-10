@@ -38,7 +38,7 @@ cd /root
 openssl req -newkey rsa:4096 -days 365 -nodes -x509 \
     -subj "/C=BR/ST=Sao Paulo/L=Sao Paulo/O=localhost/OU=Development/CN=localhost/emailAddress=juolivei@localhost.dev" \
     -keyout localhost.dev.key \
-    -out localhost.dev.crt# > /dev/null
+    -out localhost.dev.crt # > /dev/null
 cp localhost.dev.crt /etc/ssl/certs/
 cp localhost.dev.key /etc/ssl/private/
 chmod 600 /etc/ssl/certs/localhost.dev.crt /etc/ssl/private/localhost.dev.key
@@ -77,9 +77,9 @@ mysql -u root wordpress < wordpress.sql
 
 #clean cache
 #echo "\nCleaning cache.."
-apt-get clean -y# > /dev/null
-apt-get autoclean -y# > /dev/null
-apt-get autoremove -y# > /dev/null
+apt-get clean -y # > /dev/null
+apt-get autoclean -y # > /dev/null
+apt-get autoremove -y # > /dev/null
 #echo -e "..............\e[32m\e[1mOK\e[0m"
 
 #echo -e "\n _______"
