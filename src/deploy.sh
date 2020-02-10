@@ -19,9 +19,15 @@ apt-get update
 
 #dependencias
 apt-get install -y aptitude apt-utils
+echo "\n\nFASE -1 OKAAAAAAAAY\n\n\n"
+sleep 6
 
 #install mysql & nginx & php
-aptitude install -y mariadb-server nginx
+aptitude install -y mariadb-server
+echo "\n\nFASE 0 OKAAAAAAAAY\n\n\n"
+sleep 6
+
+aptitude install -y nginx
 echo "\n\nFASE 1 OKAAAAAAAAY\n\n\n"
 sleep 6
 aptitude install -y php7.3 php7.3-fpm php7.3-mysql php-common php7.3-cli php7.3-common php7.3-json php7.3-opcache php7.3-readline php-json php-mbstring php7.3-mbstring
