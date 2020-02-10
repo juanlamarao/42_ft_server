@@ -39,8 +39,8 @@ openssl req -newkey rsa:4096 -days 365 -nodes -x509 \
     -subj "/C=BR/ST=Sao Paulo/L=Sao Paulo/O=localhost/OU=Development/CN=localhost/emailAddress=juolivei@localhost.dev" \
     -keyout localhost.dev.key \
     -out localhost.dev.crt # > /dev/null
-cp localhost.dev.crt /etc/ssl/certs/
-cp localhost.dev.key /etc/ssl/private/
+mv localhost.dev.crt /etc/ssl/certs/
+mv localhost.dev.key /etc/ssl/private/
 chmod 600 /etc/ssl/certs/localhost.dev.crt /etc/ssl/private/localhost.dev.key
 #echo -e ".......................\e[32m\e[1mOK\e[0m"
 
@@ -80,6 +80,14 @@ mysql -u root wordpress < wordpress.sql
 apt-get clean -y # > /dev/null
 apt-get autoclean -y # > /dev/null
 apt-get autoremove -y # > /dev/null
+rm -f /root/php.ini
+rm -f /root/deploy.sh
+rm -f /root/nginx.conf
+rm -f /root/latest.tar.gz
+rm -f /root/wp-config.php
+rm -f /root/config.inc.php
+rm -f /root/phpmyadmin.tar.gz
+rm -f /root/wordpress.sql
 #echo -e "..............\e[32m\e[1mOK\e[0m"
 
 #echo -e "\n _______"
