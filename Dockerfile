@@ -9,6 +9,7 @@ COPY src/wp-config.php /root/
 COPY src/config.inc.php /root/
 COPY src/phpmyadmin.tar.gz /root/
 COPY src/wordpress.sql /root/
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils && apt-get -y install aptitude
 #RUN apt-get update && apt-get install dialog apt-utils -y
 EXPOSE 80 443
