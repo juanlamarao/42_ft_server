@@ -11,23 +11,29 @@
 #                                                                              #
 # **************************************************************************** #
 
-#update system
-apt update
-
-#dependencias
-apt install -y wget aptitude curl
-mkdir /var/www/localhost
-
 #configure timezone
 ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+
+#update system
+apt-get update
+
+#dependencias
+apt-get install -y aptitude
 
 #install mysql & nginx & php
 aptitude install -y mariadb-server nginx php7.3 php7.3-fpm php7.3-mysql php-common php7.3-cli php7.3-common php7.3-json php7.3-opcache php7.3-readline php-json php-mbstring php7.3-mbstring php-curl php-gd php-intl php-soap php-xml php-xmlrpc php-zip
 
 #clean cache
-apt clean -y
-apt autoclean -y
-apt autoremove -y
+apt-get clean -y
+apt-get aptitude clean -y
+apt-get autoclean -y
+apt-get aptitude autoclean -y
+apt-get autoremove -y
+apt-get aptitude autoremove -y
+
+#create web directory and change to root dir
+mkdir /var/www/localhost
+cd /root
 
 #start mysql & nginx
 /etc/init.d/mysql start
@@ -45,8 +51,8 @@ chmod 600 /etc/ssl/certs/localhost.dev.crt /etc/ssl/private/localhost.dev.key
 
 #install phpmyadmin
 #wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz
-tar -zxvf phpMyAdmin-4.9.0.1-all-languages.tar.gz
-mv phpMyAdmin-4.9.0.1-all-languages /var/www/localhost/phpmyadmin/
+tar -zxvf phpmyadmin.tar.gz
+mv phpmyadmin /var/www/localhost/phpmyadmin/
 cp -pr ./config.ini.php /var/www/localhost/phpmyadmin/config.inc.php
 cp -pr ./nginx.conf /etc/nginx/sites-available/default
 #chmod 755 /var/www/localhost
