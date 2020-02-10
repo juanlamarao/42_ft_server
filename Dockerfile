@@ -9,7 +9,7 @@ COPY src/wp-config.php /root/
 COPY src/config.inc.php /root/
 COPY src/phpmyadmin.tar.gz /root/
 COPY src/wordpress.sql /root/
-RUN apt-get update && apt-get > /dev/null install -y --no-install-recommends apt-utils > /dev/null && apt-get -y install aptitude > /dev/null
+RUN apt-get update > /dev/null && apt-get install -y --no-install-recommends apt-utils > /dev/null && apt-get -y install aptitude > /dev/null
 #RUN apt-get update && apt-get install dialog apt-utils -y
 EXPOSE 80 443
 #RUN bash /root/deploy.sh && tail -f /dev/null
