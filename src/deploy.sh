@@ -19,23 +19,11 @@ apt-get update
 
 #dependencias
 apt-get install -y aptitude
-#echo "\n\nFASE -1 OKAAAAAAAAY\n\n\n"
-#sleep 6
 
 #install mysql & nginx & php
 aptitude install -y mariadb-server
-#echo "\n\nFASE 0 OKAAAAAAAAY\n\n\n"
-#sleep 6
 
-aptitude install -y nginx
-#echo "\n\nFASE 1 OKAAAAAAAAY\n\n\n"
-#sleep 6
-aptitude install -y php7.3 php7.3-fpm php7.3-mysql php-common php7.3-cli php7.3-common php7.3-json php7.3-opcache php7.3-readline php-json php-mbstring php7.3-mbstring
-#echo "\n\nFASE 2 OKAAAAAAAAY\n\n\n"
-#sleep 6
-aptitude install -y php-curl php-gd php-intl php-soap php-xml php-xmlrpc php-zip
-#echo "\n\nFASE 3 OKAAAAAAAAY\n\n\n"
-#sleep 6
+aptitude install -y nginx php7.3 php7.3-fpm php7.3-mysql php-common php7.3-cli php7.3-common php7.3-json php7.3-opcache php7.3-readline php-json php-mbstring php7.3-mbstring php-curl php-gd php-intl php-soap php-xml php-xmlrpc php-zip
 
 #clean cache
 apt-get clean -y
@@ -45,15 +33,11 @@ apt-get autoremove -y
 #create web directory and change to root dir
 mkdir /var/www/localhost
 cd /root
-#echo "\n\nFASE 4 OKAAAAAAAAY\n\n\n"
-#sleep 6
 
 #start mysql & nginx
 /etc/init.d/mysql start
 /etc/init.d/nginx start
 /etc/init.d/php7.3-fpm start
-#echo "\n\nFASE 5 OKAAAAAAAAY\n\n\n"
-#sleep 6
 
 #configure SSL
 openssl req -newkey rsa:4096 -days 365 -nodes -x509 \
@@ -63,8 +47,6 @@ openssl req -newkey rsa:4096 -days 365 -nodes -x509 \
 cp localhost.dev.crt /etc/ssl/certs/
 cp localhost.dev.key /etc/ssl/private/
 chmod 600 /etc/ssl/certs/localhost.dev.crt /etc/ssl/private/localhost.dev.key
-#echo "\n\nFASE 6 OKAAAAAAAAY\n\n\n"
-#sleep 6
 
 #install phpmyadmin
 #wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz
@@ -76,8 +58,6 @@ cp -pr ./nginx.conf /etc/nginx/sites-available/default
 chown -R www-data:www-data /var/www/localhost/phpmyadmin
 echo "GRANT ALL PRIVILEGES ON phpmyadmin.* TO 'juolivei'@'localhost' IDENTIFIED BY 'juolivei';" | mysql -u root
 echo "FLUSH PRIVILEGES;" | mysql -u root
-#echo "\n\nFASE 7 OKAAAAAAAAY\n\n\n"
-#sleep 6
 
 #install wordpress
 #curl -LO https://wordpress.org/latest.tar.gz
