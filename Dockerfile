@@ -6,7 +6,7 @@ COPY src/deploy.sh /root/
 COPY src/nginx.conf /root/
 COPY src/latest.tar.gz /root/
 COPY src/wp-config.php /root/
-COPY src/config-inc.php /root/
+COPY src/config.inc.php /root/
 COPY src/phpmyadmin.tar.gz /root/
 COPY src/wordpress.sql /root/
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
