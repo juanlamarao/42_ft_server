@@ -52,7 +52,8 @@ chmod 600 /etc/ssl/certs/localhost.dev.crt /etc/ssl/private/localhost.dev.key
 #wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz
 tar -xvf phpmyadmin.tar.gz
 mv phpMyAdmin-4.9.0.1-all-languages /var/www/localhost/phpmyadmin
-cp -pr ./config.ini.php /var/www/localhost/phpmyadmin/config.inc.php
+cp -pr ./config.inc.php /var/www/localhost/phpmyadmin/config.inc.php
+cp -pr ./php.ini /etc/php/7.3/fpm/php.ini
 cp -pr ./nginx.conf /etc/nginx/sites-available/default
 #chmod 755 /var/www/localhost
 chown -R www-data:www-data /var/www/localhost/phpmyadmin
@@ -73,6 +74,6 @@ echo "FLUSH PRIVILEGES;" | mysql -u root
 mysql -u root wordpress < wordpress.sql
 
 #restart services
-/etc/init.d/mysql restart
-/etc/init.d/nginx restart
-/etc/init.d/php7.3-fpm restart
+#/etc/init.d/mysql restart
+#/etc/init.d/nginx restart
+#/etc/init.d/php7.3-fpm restart
