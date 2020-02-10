@@ -12,4 +12,4 @@ RUN apt-get update && apt-get install dialog apt-utils -y
 EXPOSE 80 443
 #RUN bash /root/deploy.sh && tail -f /dev/null
 RUN bash /root/deploy.sh
-CMD ["bash", "/root/run.sh"]
+ENTRYPOINT bash /root/run.sh
