@@ -68,17 +68,11 @@ chown -R www-data:www-data /var/www/localhost/wordpress
 echo "CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -u root
 echo "GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'juolivei';" | mysql -u root
 echo "FLUSH PRIVILEGES;" | mysql -u root
-#echo "\n\nFASE 8 OKAAAAAAAAY\n\n\n"
-#sleep 6
 
 #import mysql wordpress dump
 mysql -u root wordpress < wordpress.sql
-#echo "\n\nFASE 9 OKAAAAAAAAY\n\n\n"
-#sleep 6
 
 #restart services
 /etc/init.d/mysql restart
 /etc/init.d/nginx restart
 /etc/init.d/php7.3-fpm restart
-#echo "\n\nFASE 10 OKAAAAAAAAY\n\n\n"
-#sleep 6
