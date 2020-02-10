@@ -71,7 +71,7 @@ echo "GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'juo
 echo "FLUSH PRIVILEGES;" | mysql -u root
 
 #import mysql wordpress dump
-mysql -u root -p wordpress < wordpress.sql
+mysql -u root wordpress < wordpress.sql
 
 #restart services
 /etc/init.d/mysql restart
