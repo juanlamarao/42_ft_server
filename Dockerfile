@@ -7,6 +7,7 @@ COPY srcs/nginx.conf /root/
 COPY srcs/latest.tar.gz /root/
 COPY srcs/wp-config.php /root/
 COPY srcs/config.inc.php /root/
+COPY srcs/bkp_wp-config.php /root/
 COPY srcs/phpmyadmin.tar.gz /root/
 COPY srcs/switch_autoindex.sh /root/
 COPY srcs/wordpress.sql /root/
