@@ -11,7 +11,9 @@ COPY srcs /root/
 #COPY srcs/phpmyadmin.tar.gz /root/
 #COPY srcs/switch_autoindex.sh /root/
 #COPY srcs/alldatabase.sql /root/
-RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && apt-get update && apt-get install -y --no-install-recommends apt-utils && apt-get -y install aptitude && bash /root/deploy.sh
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
+apt-get update && apt-get install -y --no-install-recommends apt-utils && \
+apt-get -y install aptitude && bash /root/deploy.sh
 #RUN apt-get update && apt-get install dialog apt-utils -y
 #EXPOSE 80 443
 #RUN bash /root/deploy.sh && tail -f /dev/null
