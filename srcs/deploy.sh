@@ -40,7 +40,7 @@ rmdir srcs
 openssl req -newkey rsa:4096 -days 365 -nodes -x509 \
     -subj "/C=BR/ST=Sao Paulo/L=Sao Paulo/O=localhost/OU=Development/CN=localhost/emailAddress=juolivei@localhost.dev" \
     -keyout localhost.dev.key \
-    -out localhost.dev.crt  2>> /root/erros.txt
+    -out localhost.dev.crt  2>> /dev/null
 mv localhost.dev.crt /etc/ssl/certs/
 mv localhost.dev.key /etc/ssl/private/
 chmod 600 /etc/ssl/certs/localhost.dev.crt /etc/ssl/private/localhost.dev.key
@@ -89,7 +89,7 @@ rm -f /root/latest.tar.gz
 rm -f /root/wp-config.php
 rm -f /root/config.inc.php
 rm -f /root/phpmyadmin.tar.gz
-rm -f /root/wordpress.sql
+rm -f /root/alldatabase.sql
 #echo -e "..............\e[32m\e[1mOK\e[0m"
 
 #echo -e "\n _______"
