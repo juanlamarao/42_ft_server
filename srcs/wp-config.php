@@ -32,12 +32,10 @@ define( 'DB_PASSWORD', 'juolivei' );
 define( 'DB_HOST', 'localhost' );
 
 /** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define( 'DB_CHARSET', 'utf8mb4' );
 
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
-
-define('FS_METHOD', 'direct');
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -48,14 +46,14 @@ define('FS_METHOD', 'direct');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         '8wc|MYxM3xyq1jGuTqRLG2,.n.6ZKxOeFq^aU?1ei+[cZ``x1k~!jfA^?z]W%oTp' );
-define( 'SECURE_AUTH_KEY',  '8!ODJzgB7Lc,e7<Cy>uj6Y[b/RZ0v2DhjT]^lGnnheth4Of&*44KH<pTx,/-C?)I' );
-define( 'LOGGED_IN_KEY',    '>96G+SErg@4Vn+>;g 6aGhJgo/-j`y*`P!;?Tl$UOBRK;kJ@c+]U%%{]csxuCz7|' );
-define( 'NONCE_KEY',        'ekCagAi0,snfivK3r|Q]V{%V_a&LL3|l(w]ig!%n,$OA~z:%i|4W>mC(Za1DnHzM' );
-define( 'AUTH_SALT',        '[8S^g}]2?6FoDRi2V29[@3Ol|r,YB2RAA$Hl0-kSXoqU?&h9Mgt2Xc{hyQDCr 2e' );
-define( 'SECURE_AUTH_SALT', 'wM5z:+V55Q/U;1zj^<l]+PQ5y,WVSd_l+y*!r3ieiwSX.x#aDSwV)[BS:kY# !+a' );
-define( 'LOGGED_IN_SALT',   'Ja X5MP}Krc|9 sws.!oFq`9$)zBFoJ|fx/UdQK>,M;,1Z;r{+/Ky^<v%FdVrQNn' );
-define( 'NONCE_SALT',       'd;>vP{DJ`A]Gh9Ov%Bw;Z/yZBrp6tdZ><570E@tk?dI|$WyiRs7rq<9#-@hH1|}&' );
+define( 'AUTH_KEY',         '{jIa(b=)B*H#+.JjcnVm.#/ACS7kG(mw<,AHO@uBFR|?Y#42ml&FVg+-x|Z^vAk&' );
+define( 'SECURE_AUTH_KEY',  'zgU]??z)ys!tm^_pYT&%[>nx!V;6&^4)8Kq9$NMP92qM]7R(s2jwobEl7gKp6iOK' );
+define( 'LOGGED_IN_KEY',    '`o-,l:H^hWy6[t!)BjQR8$$wN^dBmXvt%JVXl@&zu8Q=KNGkzT.xWK ^t#|;stWp' );
+define( 'NONCE_KEY',        '=^+=q#oDTYua2CB)uA&k<Z4(X7<~=P=!~QnO0SFgxsS(T(6w#AczK(^G&lciXR/a' );
+define( 'AUTH_SALT',        'Br;|N-+RVxhOSDv9hYDc%Z9_^$6TL=(`TvcS);F>%FREM37vo,gAoIdR>F_a[RJ-' );
+define( 'SECURE_AUTH_SALT', '}7X{V9l2LF%u<um)Hdg!YarL7{OXv_b4rBjh38NoRf(:ga+XwUfMAvA*8Qf; F}m' );
+define( 'LOGGED_IN_SALT',   '5)8}CG,%U~bb%$8Qa[FotqKcbKv);S,.xs0&&L_$9s$K>=^?OL$RCR:| 7J4rizy' );
+define( 'NONCE_SALT',       '7K+fNy4C p:u N K[]`cY#MSS{NkUz]/v&VcMkoyghGj%XF&*TFz)QJi00x:D%Xl' );
 
 /**#@-*/
 
