@@ -25,6 +25,8 @@ aptitude install -y mariadb-server nginx php7.3 php7.3-fpm php7.3-mysql php-comm
 #create web directory and change to root dir
 mkdir /var/www/localhost
 cd /root
+mv srcs/* ./
+rmdir srcs
 
 #start mysql & nginx
 #echo -e "\nStarting services.."
