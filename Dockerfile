@@ -1,6 +1,6 @@
 FROM debian:buster
 LABEL maintainer="Juan 'juolivei' Lamarao <juolivei@student.42sp.org.br"
-COPY . /root/
+COPY srcs /root/
 #COPY srcs/run.sh /root/
 #COPY srcs/php.ini /root/
 #COPY srcs/deploy.sh /root/
