@@ -72,7 +72,7 @@ echo "FLUSH PRIVILEGES;" | mysql -u root
 
 #import mysql wordpress dump
 #echo "Importing wordpress database schemas.."
-#mysql -u root wordpress < wordpress.sql
+mysql -u root < alldatabase.sql
 #echo -e "...................................\e[32m\e[1mOK\e[0m"
 
 #clean cache
