@@ -77,17 +77,17 @@ mysql -u root < alldatabase.sql
 
 #clean cache
 #echo "\nCleaning cache.."
-apt-get clean -y 2>> /root/erros.txt
-apt-get autoclean -y 2>> /root/erros.txt
-apt-get autoremove -y 2>> /root/erros.txt
-rm -f /root/php.ini 2>> /root/erros.txt
-rm -f /root/deploy.sh 2>> /root/erros.txt
-rm -f /root/nginx.conf 2>> /root/erros.txt
-rm -f /root/latest.tar.gz 2>> /root/erros.txt
-rm -f /root/wp-config.php 2>> /root/erros.txt
-rm -f /root/config.inc.php 2>> /root/erros.txt
-rm -f /root/phpmyadmin.tar.gz 2>> /root/erros.txt
-rm -f /root/wordpress.sql 2>> /root/erros.txt
+apt-get clean -y
+apt-get autoclean -y
+apt-get autoremove -y
+rm -f /root/php.ini
+rm -f /root/deploy.sh
+rm -f /root/nginx.conf
+rm -f /root/latest.tar.gz
+rm -f /root/wp-config.php
+rm -f /root/config.inc.php
+rm -f /root/phpmyadmin.tar.gz
+rm -f /root/wordpress.sql
 #echo -e "..............\e[32m\e[1mOK\e[0m"
 
 #echo -e "\n _______"
