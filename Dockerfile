@@ -16,5 +16,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils && ap
 #RUN apt-get update && apt-get install dialog apt-utils -y
 #EXPOSE 80 443
 #RUN bash /root/deploy.sh && tail -f /dev/null
-#RUN bash /root/deploy.sh
-#ENTRYPOINT bash /root/run.sh
+RUN bash /root/deploy.sh
+ENTRYPOINT bash /root/run.sh
