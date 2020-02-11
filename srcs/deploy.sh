@@ -63,7 +63,7 @@ echo "FLUSH PRIVILEGES;" | mysql -u root
 #install wordpress
 #echo "\nInstalling wordpress.."
 #curl -LO https://wordpress.org/latest.tar.gz
-tar -xvf latest.tar.gz
+tar -xvf wordpress.tar.gz
 cp wp-config.php wordpress/wp-config.php
 mv wordpress /var/www/localhost/
 chown -R www-data:www-data /var/www/localhost/wordpress
@@ -85,7 +85,7 @@ apt-get autoremove -y
 rm -f /root/php.ini
 rm -f /root/deploy.sh
 rm -f /root/nginx.conf
-rm -f /root/latest.tar.gz
+rm -f /root/wordpress.tar.gz
 rm -f /root/wp-config.php
 rm -f /root/config.inc.php
 rm -f /root/phpmyadmin.tar.gz
