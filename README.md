@@ -9,7 +9,7 @@ An automated docker container with LEMP +wordpress +ssl autosigned
 ### Opition 1: Clonning the repository
 git clone <https://github.com/juanlamarao/42_ft_server/> && cd 42_ft_server && docker build . -t ft_server && docker run -it -p80:80 -p443:443 ft_server
   
-### Opition 2: Running unsing docker hub
+### Opition 2: Using docker hub
 docker run -it -p80:80 -p443:443 juanlamarao/ft_server:latest
   
 ### And then acess it @ <https://localhost>
