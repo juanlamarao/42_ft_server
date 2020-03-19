@@ -1,4 +1,7 @@
 # ft_server
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7131d491cb014536819ca63cc18cf11a)](https://app.codacy.com/manual/juanlamarao/42_ft_server?utm_source=github.com&utm_medium=referral&utm_content=juanlamarao/42_ft_server&utm_campaign=Badge_Grade_Dashboard)
+
 An automated docker container with LEMP +wordpress +ssl autosigned
 
 ## How To Test _(choose one)_
