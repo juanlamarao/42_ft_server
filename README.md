@@ -30,7 +30,7 @@ This docker project aims to build multiples services, using only one container:
 <https://localhost/phpmyadmin>  
 
 ## Switching the NGINX index ON or OFF
-docker exec $(docker ps | grep ft_server | cut -d ' ' -f 1) bash /root/switch_autoindex.sh 
+docker exec $(docker ps | grep ft_server | cut -d ' ' -f 1) bash /root/switch_autoindex.sh  
 <https://localhost>
 
 ## After testing you can delete containers and images by running
