@@ -38,8 +38,8 @@ docker rm $(docker ps -a | grep ft_server | cut -d ' ' -f 1)
 docker images -a | grep "ft_server" | awk '{print $3}' | xargs docker rmi
 
 ### If you used the repository method, remove the debian image as well
-docker images -a | grep "buster" | awk '{print $3}' | xargs docker rmi
-
+docker images -a | grep "buster" | awk '{print $3}' | xargs docker rmi  
+  
 ## PT-BR Translation
 Um Container Docker automatizado utilizando uma imagem Debian:buster com LEMP, wordpress e SSL autoassinado.
 
