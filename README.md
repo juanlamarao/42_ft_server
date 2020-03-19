@@ -25,16 +25,16 @@ This docker project aims to build multiples services, using only one container:
 1. docker run -it -p80:80 -p443:443 juanlamarao/ft_server:latest
   
 ### It's time to access it
-<https://localhost>
-<https://localhost/wordpress>
-<https://localhost/phpmyadmin>
+<https://localhost>  
+<https://localhost/wordpress>  
+<https://localhost/phpmyadmin>  
 
 ## Switching the NGINX index ON or OFF
 docker exec $(docker ps | grep ft_server | cut -d ' ' -f 1) bash /root/switch_autoindex.sh 
 <https://localhost>
 
 ## After testing you can delete containers and images by running
-docker rm $(docker ps -a | grep ft_server | cut -d ' ' -f 1)
+docker rm $(docker ps -a | grep ft_server | cut -d ' ' -f 1)  
 docker images -a | grep "ft_server" | awk '{print $3}' | xargs docker rmi
 
 ### If you used the repository method, remove the debian image as well
@@ -64,16 +64,16 @@ Este projeto docker tem como objetivo construir multiplus serviços, utilizando 
 1. docker run -it -p80:80 -p443:443 juanlamarao/ft_server:latest
   
 ### É hora de acessar
-<https://localhost>
-<https://localhost/wordpress>
-<https://localhost/phpmyadmin>
+<https://localhost>  
+<https://localhost/wordpress>  
+<https://localhost/phpmyadmin>  
 
 ## Alternando entre autoindex do NGINX ON e OFF
-docker exec $(docker ps | grep ft_server | cut -d ' ' -f 1) bash /root/switch_autoindex.sh 
+docker exec $(docker ps | grep ft_server | cut -d ' ' -f 1) bash /root/switch_autoindex.sh  
 <https://localhost>
 
 ## Após testar, você pode remover as imagens e containers com os seguintes comandos
-docker rm $(docker ps -a | grep ft_server | cut -d ' ' -f 1)
+docker rm $(docker ps -a | grep ft_server | cut -d ' ' -f 1)  
 docker images -a | grep "ft_server" | awk '{print $3}' | xargs docker rmi
 
 ### Caso tenha utilizado o primeiro método, remova também a imagem do Debian
