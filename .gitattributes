@@ -1,1 +1,1 @@
-./src linguist-generated=false
+*.php linguist-vendored
