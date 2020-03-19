@@ -2,7 +2,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7131d491cb014536819ca63cc18cf11a)](https://app.codacy.com/manual/juanlamarao/42_ft_server?utm_source=github.com&utm_medium=referral&utm_content=juanlamarao/42_ft_server&utm_campaign=Badge_Grade_Dashboard)
 
-An automated docker container using debian:buster image with LEMP, wordpress and ssl autosigned.
+An automated docker container using debian:buster image with LEMP, wordpress and autosigned SSL.
 
 ## How it works
 This docker project aims to build multiples services, using only one container:
@@ -41,7 +41,7 @@ docker images -a | grep "ft_server" | awk '{print $3}' | xargs docker rmi
 docker images -a | grep "buster" | awk '{print $3}' | xargs docker rmi
 
 ## PT-BR Translation
-Um Container Docker automatizado utilizando uma imagem Debian:buster com LEMP, wordpress and ssl autoassinado.
+Um Container Docker automatizado utilizando uma imagem Debian:buster com LEMP, wordpress e SSL autoassinado.
 
 ## Como funciona
 Este projeto docker tem como objetivo construir multiplus serviços, utilizando somente um container:
