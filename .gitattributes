@@ -1,3 +1,1 @@
-*.php linguist-detectable=false
-*.html linguist-detectable=false
-*.sh linguist-detectable=true
+src/* linguist-generated=false
