@@ -1,6 +1,7 @@
 # ft_server
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7131d491cb014536819ca63cc18cf11a)](https://app.codacy.com/manual/juanlamarao/42_ft_server?utm_source=github.com&utm_medium=referral&utm_content=juanlamarao/42_ft_server&utm_campaign=Badge_Grade_Dashboard)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 An automated docker container using debian:buster image with LEMP, wordpress and autosigned SSL.
 
